@@ -32,7 +32,6 @@ public class ChessMatch {
 			validateSourcePosition(source);
 			Piece capturedPiece = makeMove(source, target);
 			return (ChessPiece)capturedPiece;
-			
 	}
 	
 	private Piece makeMove(Position source, Position target) {
@@ -44,7 +43,7 @@ public class ChessMatch {
 	
 	private void validateSourcePosition(Position position) {
 		if (!board.thereIsAPiece(position)) {
-			throw new BoardException("Position not on the board");
+			throw new ChessException("Position not on the board");
 		}
 	}
 	
